@@ -13,7 +13,9 @@
   <body>
     <div class="background"></div>
     <div class="app-container" id="appContainer">
-      <%# render 'shared/navbar' %>
+      <%= render 'shared/navbar' %>
+      <%= render 'shared/overlay' %>
+      <div class="content-container">
       <%= yield %>
     </div>
   </body>

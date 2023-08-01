@@ -1,0 +1,10 @@
+.app-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: calc((1rem * 9)/(16*0.03)); /* 9:16 aspect ratio (9/16 * 100vh) */
+  height: calc(1rem/0.03);
+  background-color: oklch(100% 0 0 / 80%); /* Add some transparency to the container */
+  box-shadow: 0 0 10px oklch(0% 0 0 / 30%);
+}

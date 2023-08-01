@@ -1,9 +1,12 @@
 SHELL=/bin/sh
 
-UID:=$(SHELL id -u)
-GID:=$(SHELL id -g)
+UID := $(shell id -u)
+GID := $(shell id -g)
 
 export UID GID
+
+t:
+	echo $(UID)
 
 app-setup: app-build app-db-prepare
 
