@@ -1,2 +1,12 @@
-<h1>Booking#paid</h1>
-<p>Find me in app/views/booking/paid.html.erb</p>
+<div class="message container-fluid justify-content-center d-flex align-items-center">Has your booking been paid?</div>
+
+<div class="input-row container-fluid">
+  <div class="row gx-2">
+    <div class="col">
+      <%= link_to 'No', booking_create_path, class: "btn btn-danger"%>
+    </div>
+    <div class="col">
+      <%= link_to 'Yes', booking_input_path, class: "btn btn-success" %>
+    </div>
+  </div>
+</div>

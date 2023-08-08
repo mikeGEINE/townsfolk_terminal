@@ -1,2 +1,20 @@
-<h1>Booking#input</h1>
-<p>Find me in app/views/booking/input.html.erb</p>
+<div class="message container-fluid justify-content-center d-flex align-items-center">What is your booking number?</div>
+
+<div class="input-box">
+  <%= form_with url: booking_checkin_path, method: :get do |form| %>
+  <div class="input-group">
+    <%= form.text_field :booking_id, class: "form-control", placeholder: "Booking №", disabled: true, readonly: true%>
+    <%= form.submit "✓", class: "btn btn-success"%>
+  </div>
+  <% end %>
+  <div class="input-digits row gx-0">
+    <% for i in 0..9 do %>
+      <div class="col">
+        <button class="btn btn-primary btn-sm btn-digit" type="button" id="<%= i %>"><%= i %></button>
+      </div>
+    <% end%>
+    <div class="col">
+      <button class="btn btn-danger btn-sm" type="button" id="removeLastDigit">⌫</button>
+    </div>
+  </div>
+</div>

@@ -1,12 +1,12 @@
-.input-row {
+.input-box {
   position: absolute;
   bottom: 0.5rem;
-  left: 0;
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
   border-top: 0.1rem solid oklch(26.21% 0.009 248.19);
 }
 
-.input-row .btn {
-  width: 100%
+.input-digits {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
 }
