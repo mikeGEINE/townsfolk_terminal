@@ -66,6 +66,9 @@ group :development do
   gem 'rubocop-performance', require: false
   gem 'rubocop-rails', require: false
   gem 'rubocop-rspec', require: false
+
+  gem 'solargraph'
+  gem 'solargraph-rails'
 end
 
 group :test do
@@ -77,3 +80,6 @@ end
 
 gem 'bootstrap', '~> 5.2', '>= 5.2.3'
 gem 'jquery-rails'
+
+gem 'dry-initializer'
+gem 'dry-monads'

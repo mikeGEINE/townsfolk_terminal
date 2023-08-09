@@ -1,0 +1,11 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  category: one
+  start: 2023-08-08
+  end: 2023-08-08
+
+two:
+  category: two
+  start: 2023-08-08
+  end: 2023-08-08

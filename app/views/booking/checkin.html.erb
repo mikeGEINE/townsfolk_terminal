@@ -1,2 +1,8 @@
 <h1>Booking#checkin</h1>
 <p>Find me in app/views/booking/checkin.html.erb</p>
+
+<% if @room %>
+  <p>Room number <%= @room.door %></p>
+<% else %>
+  <p><%= @fail %></p>
+<% end %>
