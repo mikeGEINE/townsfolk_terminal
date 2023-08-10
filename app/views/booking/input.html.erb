@@ -1,20 +1,20 @@
 <div class="message container-fluid justify-content-center d-flex align-items-center">What is your booking number?</div>
 
-<div class="input-box">
+<div class="input-box" data-controller="input-number">
   <%= form_with url: booking_checkin_path, method: :get do |form| %>
   <div class="input-group">
-    <%= form.text_field :booking_id, class: "form-control", placeholder: "Booking №", readonly: true, tabindex: -1 %>
+    <%= form.text_field :booking_id, data: {input_number_target: "field"}, class: "form-control", placeholder: "Booking №", readonly: true, tabindex: -1 %>
     <%= form.submit "✓", name: nil, class: "btn btn-success"%>
   </div>
   <% end %>
   <div class="input-digits row gx-0">
     <% for i in 0..9 do %>
       <div class="col">
-        <button class="btn btn-primary btn-sm btn-digit" type="button" id="<%= i %>"><%= i %></button>
+        <button data-action="input-number#append" class="btn btn-primary btn-sm btn-digit" type="button" id="<%= i %>"><%= i %></button>
       </div>
     <% end%>
     <div class="col">
-      <button class="btn btn-danger btn-sm" type="button" id="removeLastDigit">⌫</button>
+      <button data-action="input-number#remove" class="btn btn-danger btn-sm" type="button" id="removeLastDigit">⌫</button>
     </div>
   </div>
 </div>

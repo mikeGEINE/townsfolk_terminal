@@ -12,7 +12,7 @@ services:
       - .env
     volumes:
       - .:/app:cached
-      - bundle:/usr/local/bundle:cached
+      # - bundle:/usr/local/bundle:cached
     command: ash -c "rm -f tmp/pids/server.pid && bundle exec rails s -b 0.0.0.0"
     user: $UID:$GID
     # links:
