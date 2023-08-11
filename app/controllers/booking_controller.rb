@@ -10,7 +10,7 @@ class BookingController < ApplicationController
   def checkin
     CheckinBooking.call(booking_params).either(
       ->(room) { @room = room },
-      ->(failure_msg_key) { @fail = failure_msg_key }
+      ->(failure_msg_key) { render_error failure_msg_key }
     )
   end
 
@@ -18,5 +18,10 @@ class BookingController < ApplicationController
 
   def booking_params
     params.permit(:booking_id)
+  end
+
+  def render_error(fail)
+    @fail = fail
+    render 'error/custom'
   end
 end

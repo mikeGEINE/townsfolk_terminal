@@ -1,8 +1,9 @@
-<h1>Booking#checkin</h1>
-<p>Find me in app/views/booking/checkin.html.erb</p>
+<div class="message container-fluid justify-content-center d-flex align-items-center align-self-center">
+  <p class="text-center">Your room number: <%= @room.door %></p>
 
-<% if @room %>
-  <p>Room number <%= @room.door %></p>
-<% else %>
-  <p><%= @fail %></p>
-<% end %>
+  <p class="text-center">Access code: <%= @room.code %></p>
+</div>
+
+<div class="input-row container-fluid">
+  <%= link_to 'Thanks!', root_path, class: "btn btn-success"%>
+</div>
