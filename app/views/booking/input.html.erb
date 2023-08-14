@@ -1,9 +1,9 @@
-<div class="message container-fluid justify-content-center d-flex align-items-center">What is your booking number?</div>
+<div class="message container-fluid justify-content-center d-flex align-items-center"><%= t('booking_no_request') %></div>
 
 <div class="input-box" data-controller="input-number">
   <%= form_with url: booking_checkin_path, method: :get do |form| %>
   <div class="input-group">
-    <%= form.text_field :booking_id, data: {input_number_target: "field"}, class: "form-control", placeholder: "Booking №", readonly: true, tabindex: -1 %>
+    <%= form.text_field :booking_id, data: {input_number_target: "field"}, class: "form-control", placeholder: t('booking_no'), readonly: true, tabindex: -1 %>
     <%= form.submit "✓", name: nil, class: "btn btn-success"%>
   </div>
   <% end %>

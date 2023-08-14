@@ -1,7 +1,8 @@
 .message {
   background-color: oklch(95.6% 0 0);
-  height: 20%;
+  min-height: 20%;
   border-radius: 2rem;
   flex-direction: column;
   text-align: center;
+  height:fit-content;
 }

@@ -1,0 +1,17 @@
+<div class="modal fade" id="langModal" tabindex="-1" aria-labelledby="helpModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="helpModalLabel"><%= t('lang') %></h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label=<%= t('close') %>></button>
+      </div>
+      <div class="modal-body container-fluid justify-content-center d-flex align-items-center flex-column">
+        <%= link_to 'Русский', root_path(locale: :ru), class: 'btn btn-primary w-100' %><br/>
+        <%= link_to 'English', root_path(locale: :en), class: 'btn btn-primary w-100' %>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"><%= t('close') %></button>
+      </div>
+    </div>
+  </div>
+</div>

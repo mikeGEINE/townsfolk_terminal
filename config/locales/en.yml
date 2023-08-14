@@ -1,33 +1,27 @@
-# Files in the config/locales directory are used for internationalization
-# and are automatically loaded by Rails. If you want to use locales other
-# than English, add the necessary files in this directory.
-#
-# To use the locales, use `I18n.t`:
-#
-#     I18n.t "hello"
-#
-# In views, this is aliased to just `t`:
-#
-#     <%= t("hello") %>
-#
-# To use a different locale, set it with `I18n.locale`:
-#
-#     I18n.locale = :es
-#
-# This would use the information in config/locales/es.yml.
-#
-# The following keys must be escaped otherwise they will not be retrieved by
-# the default I18n backend:
-#
-# true, false, on, off, yes, no
-#
-# Instead, surround them with single quotes.
-#
-# en:
-#   "true": "foo"
-#
-# To learn more, please read the Rails Internationalization guide
-# available at https://guides.rubyonrails.org/i18n.html.
-
 en:
-  hello: "Hello world"
+  welcome: Welcome! How can I help you?
+  booking_no_request: What is your booking number?
+  room_number: Your room number
+  access_code: Room access code
+  buy_room: Buy room
+  check-in: Check-in
+  booking_no: Booking №
+  been_paid_req: Has your booking been paid?
+  'yes': 'Yes'
+  'no': 'No'
+  townsfolk: Townsfolk
+  lang: Language
+  close: Close
+  help: Help
+  help_msg: If you need any help, contact us
+  try_again: Try again
+  booking_not_found: Booking not found! Check if the booking number is correct.
+  booking_not_paid: Booking is not paid! Pay for the booking and try again.
+  booking_already_complete: >-
+    This booking has already been checked-in! Check if your booking number is
+    correct or contact us.
+  no_rooms_available: >-
+    No rooms available right now. Usually all rooms are ready for check-in after
+    2 p.m. Try again later or contact us.
+  thanks: Thanks!
+  out_of_date: Your booking is out of date! If you consider this a mistake, contact us.

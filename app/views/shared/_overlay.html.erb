@@ -1,4 +1,14 @@
 <div class="container-fluid d-flex justify-content-between overlay">
-  <%= link_to "?", root_path, class: "btn btn-outline-info btn-sm px-0 overlay-btn"%>
-  <%= link_to "RU", root_path, class: "btn btn-outline-info btn-sm px-0 overlay-btn"%>
+  <%= button_tag "❔", type: 'button', class: "btn btn-outline-info btn-sm px-0 overlay-btn",
+  data: {
+    bs_toggle: "modal",
+    bs_target: "#helpModal"
+  }
+  %>
+  <%= button_tag "🌍", type: 'button', class: "btn btn-outline-info btn-sm px-0 overlay-btn",
+  data: {
+    bs_toggle: "modal",
+    bs_target: "#langModal"
+  }
+  %>
 </div>

@@ -1,12 +1,12 @@
-<div class="message container-fluid justify-content-center d-flex align-items-center">Has your booking been paid?</div>
+<div class="message container-fluid justify-content-center d-flex align-items-center"><%= t('been_paid_req') %></div>
 
 <div class="input-row container-fluid">
   <div class="row gx-2">
     <div class="col">
-      <%= link_to 'No', booking_create_path, class: "btn btn-danger"%>
+      <%= link_to t('no'), booking_create_path, class: "btn btn-danger"%>
     </div>
     <div class="col">
-      <%= link_to 'Yes', booking_input_path, class: "btn btn-success" %>
+      <%= link_to t('yes'), booking_input_path, class: "btn btn-success" %>
     </div>
   </div>
 </div>

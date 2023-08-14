@@ -1,9 +1,9 @@
 <div class="message container-fluid justify-content-center d-flex align-items-center align-self-center">
   Oops! <br>
-  <%= @fail %>
+  <%= t(@fail) %>
 </div>
 
 <div class="input-row container-fluid">
-  <%= link_to 'Try again', root_path, class: "btn btn-danger"%>
+  <%= link_to t('try_again'), root_path, class: "btn btn-danger"%>
 </div>
 

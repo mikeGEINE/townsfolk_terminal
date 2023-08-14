@@ -37,6 +37,7 @@ class CheckinBooking < BasicInteractor
       Failure(:no_rooms_available)
     else
       rooms.first.occupied!
+      booking.complete!
       Success(rooms.first)
     end
   end

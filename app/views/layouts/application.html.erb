@@ -10,7 +10,9 @@
     <%= javascript_importmap_tags %>
   </head>
 
-  <body>
+  <body class='app'>
+    <%= render 'shared/help' %>
+    <%= render 'shared/lang' %>
     <div class="background"></div>
     <div class="app-container" id="appContainer">
       <%= render 'shared/navbar' %>
