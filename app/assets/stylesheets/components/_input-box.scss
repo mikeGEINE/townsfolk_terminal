@@ -8,10 +8,15 @@
 }
 
 .input-digits {
-  margin-top: 3rem;
-  margin-bottom: 3rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 
 input[readonly][tabindex="-1"] {
   pointer-events: none;
+}
+
+.btn-key {
+  margin: 0.05rem;
+  width: 1.7rem;
 }
