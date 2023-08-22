@@ -1,20 +1,11 @@
 <div class="message container-fluid justify-content-center d-flex align-items-center"><%= t('booking_no_request') %></div>
 
-<div class="input-box" data-controller="input-number">
+<div class="input-box" data-controller="input-booking">
   <%= form_with url: booking_checkin_path, method: :get do |form| %>
   <div class="input-group">
-    <%= form.text_field :booking_id, data: {input_number_target: "field"}, class: "form-control", placeholder: t('booking_no'), readonly: true, tabindex: -1 %>
+    <%= form.text_field :booking_id, data: {input_booking_target: "field"}, class: "form-control", placeholder: t('booking_no'), readonly: true, tabindex: -1 %>
     <%= form.submit "✓", name: nil, class: "btn btn-success"%>
   </div>
   <% end %>
-  <div class="input-digits row gx-0">
-    <% for i in 0..9 do %>
-      <div class="col">
-        <button data-action="input-number#append" class="btn btn-primary btn-sm btn-digit" type="button" id="<%= i %>"><%= i %></button>
-      </div>
-    <% end%>
-    <div class="col">
-      <button data-action="input-number#remove" class="btn btn-danger btn-sm" type="button" id="removeLastDigit">⌫</button>
-    </div>
-  </div>
+  <%= render 'shared/keyboard' %>
 </div>

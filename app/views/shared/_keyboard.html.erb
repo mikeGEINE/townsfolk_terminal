@@ -1,0 +1,23 @@
+<div class="input-digits">
+  <div class="d-flex gx-0 justify-content-center">
+    <% for i in 0..9 do %>
+      <button data-action="input-booking#append" class="btn btn-primary btn-sm btn-key" type="button" id="<%= i %>"><%= i %></button>
+    <% end%>
+  </div>
+  <div class="d-flex gx-0 justify-content-center">
+    <% for k in ['Q','W','E','R','T','Y','U','I','O','P'] do %>
+      <button data-action="input-booking#append" class="btn btn-primary btn-sm btn-key" type="button" id="<%= k %>"><%= k %></button>
+    <% end%>
+  </div>
+  <div class="d-flex gx-0 justify-content-center">
+    <% for k in ['A','S','D','F','G','H','J','K','L'] do %>
+      <button data-action="input-booking#append" class="btn btn-primary btn-sm btn-key" type="button" id="<%= k %>"><%= k %></button>
+    <% end%>
+  </div>
+    <div class="d-flex gx-0 justify-content-center">
+    <% for k in ['Z','X','C','V','B','N','M'] do %>
+      <button data-action="input-booking#append" class="btn btn-primary btn-sm btn-key" type="button" id="<%= k %>"><%= k %></button>
+    <% end%>
+    <button data-action="input-booking#remove" class="btn btn-danger btn-sm" type="button" id="removeLastDigit">⌫</button>
+  </div>
+</div>
