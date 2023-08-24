@@ -10,15 +10,15 @@
     <%= javascript_importmap_tags %>
   </head>
 
-  <body class='app'>
-    <%= render 'shared/help' %>
-    <%= render 'shared/lang' %>
-    <div class="background"></div>
-    <div class="app-container" data-controller="adjust-container"
-        data-action="resize@window->adjust-container#layout">
-      <%= render 'shared/navbar' %>
-      <%= render 'shared/overlay' %>
-      <div class="content-container">
+  <body>
+    <%= render 'shared/admin_navbar' %>
+    <% if notice %>
+      <p class="alert alert-primary"><%= notice %></p>
+    <% end %>
+    <% if alert %>
+      <p class="alert alert-danger"><%= alert %></p>
+    <% end %>
+    <div class="">
       <%= yield %>
     </div>
   </body>

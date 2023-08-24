@@ -83,3 +83,5 @@ gem 'jquery-rails'
 
 gem 'dry-initializer'
 gem 'dry-monads'
+
+gem 'devise'

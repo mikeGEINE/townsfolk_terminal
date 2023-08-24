@@ -1,0 +1,29 @@
+<h1>Аккаунты</h1>
+
+<table class="align-middle text-truncate mb-0 table table-borderless table-hover">
+  <thead>
+    <tr>
+      <th class="text-center">#</th>
+      <th class="text-center">Email</th>
+      <th class="text-center">Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @users.each do |user| %>
+      <tr>
+        <td class="text-center text-muted"><%= user.id %></td>
+        <td class="text-center"><%= user.email %></td>
+        <td class="text-center">
+          <% if user != current_user %>
+            <div class="btn-group" role="group">
+              <% User.roles.each do |role| %>
+                <%= button_to t(role[0]), admin_update_account_path, params: {account_id: user.id, role: role[0]},
+                 class: 'btn btn-primary', disabled: user.role == role[0] %>
+              <% end %>
+            </div>
+          <% end %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

@@ -4,6 +4,3 @@
 //= require bootstrap-sprockets
 import "@hotwired/turbo-rails"
 import "controllers"
-
-import 'custom/vertical_screen'
-// import 'custom/booking_input'

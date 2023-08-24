@@ -1,6 +1,8 @@
 # frozen_string_literal: true
 
 class BookingController < ApplicationController
+  before_action :validate_rights!
+
   def create; end
 
   def paid; end
