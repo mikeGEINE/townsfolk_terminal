@@ -17,7 +17,7 @@
           <% if user != current_user %>
             <div class="btn-group" role="group">
               <% User.roles.each do |role| %>
-                <%= button_to t(role[0]), admin_update_account_path, params: {account_id: user.id, role: role[0]},
+                <%= button_to t(role[0]), admin_update_account_path, params: {account: {id: user.id, role: role[0]}},
                  class: 'btn btn-primary', disabled: user.role == role[0] %>
               <% end %>
             </div>

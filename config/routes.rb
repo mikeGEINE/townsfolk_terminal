@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   get 'admin/view_accounts'
   get 'admin/view_rooms'
   post 'admin/update_account'
-  get 'admin/update_room'
+  post 'admin/update_room'
   get 'admin', to: 'admin#view_rooms'
   devise_scope :user do
     get 'logout', to: 'devise/sessions#destroy'

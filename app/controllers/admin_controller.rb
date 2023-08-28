@@ -7,17 +7,18 @@ class AdminController < ApplicationController
   end
 
   def view_rooms
+    @rooms = Room.order(id: :asc).all
   end
 
   # TODO: Rewrite in a safer way
   def update_account
-    acc = User.find(account_params[:account_id])
-    acc.role = User.roles[account_params[:role]]
-    acc.save
+    User.find(account_params[:id]).update!(account_params)
     redirect_to admin_view_accounts_path
   end
 
   def update_room
+    Room.find(room_params[:id]).update!(room_params)
+    redirect_to admin_view_rooms_path
   end
 
   private
@@ -27,6 +28,10 @@ class AdminController < ApplicationController
   end
 
   def account_params
-    params.permit(:account_id, :role)
+    params.require(:account).permit(:id, :role)
+  end
+
+  def room_params
+    params.require(:room).permit(:id, :status, :code)
   end
 end
