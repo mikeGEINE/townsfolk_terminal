@@ -14,3 +14,6 @@ rooms = Room.create([{category: categories.first, door: '1', code: '1234', statu
 bookings = Booking.create([{id: 123456789, category: categories.first, start_date: Time.zone.today, end_date: Time.zone.today + 30, status: :paid},
                            {id: 1234, category: categories.second, start_date: Time.zone.today, end_date: Time.zone.today + 30, status: :created},
                            {id: 9876, category: categories.first, start_date: Time.zone.today - 5, end_date: Time.zone.today - 4, status: :paid}])
+
+user = User.create({email: 'admin@test.ru', password: '123456', password_confirmation: '123456'})
+user.admin!

@@ -1,6 +1,6 @@
 <div class="input-digits">
   <div class="d-flex gx-0 justify-content-center">
-    <% for i in 0..9 do %>
+    <% for i in [1, 2, 3, 4, 5, 6, 7, 8, 9, 0] do %>
       <button data-action="input-booking#append" class="btn btn-primary btn-sm btn-key" type="button" id="<%= i %>"><%= i %></button>
     <% end%>
   </div>
@@ -15,7 +15,7 @@
     <% end%>
   </div>
     <div class="d-flex gx-0 justify-content-center">
-    <% for k in ['Z','X','C','V','B','N','M'] do %>
+    <% for k in ['-', 'Z','X','C','V','B','N','M'] do %>
       <button data-action="input-booking#append" class="btn btn-primary btn-sm btn-key" type="button" id="<%= k %>"><%= k %></button>
     <% end%>
     <button data-action="input-booking#remove" class="btn btn-danger btn-sm" type="button" id="removeLastDigit">⌫</button>

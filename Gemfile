@@ -85,3 +85,7 @@ gem 'dry-initializer'
 gem 'dry-monads'
 
 gem 'devise'
+
+gem 'faraday'
+gem 'faraday-cookie_jar'
+gem 'faraday-follow_redirects'

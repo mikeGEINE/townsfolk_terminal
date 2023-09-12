@@ -33,8 +33,8 @@ ActiveRecord::Schema[7.0].define(version: 2023_08_22_125439) do
   create_table "rooms", force: :cascade do |t|
     t.bigint "category_id", null: false
     t.string "door"
-    t.string "code"
-    t.integer "status"
+    t.string "code", default: "change_me"
+    t.integer "status", default: 0
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["category_id"], name: "index_rooms_on_category_id"

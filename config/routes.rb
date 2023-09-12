@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   post 'admin/update_account'
   post 'admin/update_room'
   get 'admin', to: 'admin#view_rooms'
+  get 'admin/sync_rooms', to: 'admin#sync_rooms'
   devise_scope :user do
     get 'logout', to: 'devise/sessions#destroy'
   end

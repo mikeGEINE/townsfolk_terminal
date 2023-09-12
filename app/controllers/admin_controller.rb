@@ -21,6 +21,13 @@ class AdminController < ApplicationController
     redirect_to admin_view_rooms_path
   end
 
+  def sync_rooms
+    UpdateRooms.call().either(
+      ->(res) { redirect_to admin_view_rooms_path, notice: 'Synced with Bnovo successfully'},
+      ->(err_code) { redirect_to admin_view_rooms_path, error: t(err_code) }
+    )
+  end
+
   private
 
   def admin_auth

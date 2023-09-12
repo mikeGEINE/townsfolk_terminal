@@ -5,15 +5,9 @@ export default class extends Controller {
 
   append(event) {
     this.fieldTarget.value += event.target.textContent;
-    if (this.fieldTarget.value.length === 5) {
-      this.fieldTarget.value += '-';
-    }
   }
 
   remove(event) {
-    if (this.fieldTarget.value[this.fieldTarget.value.length - 1] === '-') {
-      this.fieldTarget.value = this.fieldTarget.value.slice(0, -1);
-    }
     this.fieldTarget.value = this.fieldTarget.value.slice(0, -1);
   }
 }
