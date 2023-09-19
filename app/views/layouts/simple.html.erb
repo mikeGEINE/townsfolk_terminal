@@ -8,6 +8,7 @@
 
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
+    <%= favicon_link_tag %>
   </head>
 
   <body>
@@ -18,7 +19,7 @@
     <% if alert %>
       <p class="alert alert-danger"><%= alert %></p>
     <% end %>
-    <div class="">
+    <div class="container">
       <%= yield %>
     </div>
   </body>
