@@ -1,26 +1,30 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
-  get 'admin/view_accounts'
-  get 'admin/view_rooms'
-  post 'admin/update_account'
-  post 'admin/update_room'
-  get 'admin', to: 'admin#view_rooms'
-  get 'admin/sync_rooms', to: 'admin#sync_rooms'
-  devise_scope :user do
-    get 'logout', to: 'devise/sessions#destroy'
+  namespace :admin do
+    root to: 'admin#view_rooms'
+    get 'view_accounts'
+    get 'view_rooms'
+    post 'update_account'
+    post 'update_room'
+    get 'sync_rooms', to: 'admin#sync_rooms'
   end
-  get 'approve', to: 'home#approve'
-  get 'base', to: 'home#base'
+
   scope '(:locale)', locale: /en|ru/ do
     get 'booking/create'
     get 'booking/paid'
     get 'booking/input'
     get 'booking/checkin'
-    devise_for :users
 
     get 'help', to: 'home#help'
   end
+
+  devise_for :users
+  devise_scope :user do
+    get 'logout', to: 'devise/sessions#destroy'
+  end
+  get 'approve', to: 'home#approve'
+  get 'about', to: 'home#about'
 
   get '/:locale' => 'home#index'
   root 'home#index'

@@ -2,7 +2,7 @@
 
 class HomeController < ApplicationController
   before_action :validate_rights!, except: %i[approve]
-  layout 'simple', only: %i[approve base]
+  layout 'simple', only: %i[approve about]
 
   def index; end
 
@@ -18,5 +18,5 @@ class HomeController < ApplicationController
 
   def approve; end
 
-  def base; end
+  def about; end
 end

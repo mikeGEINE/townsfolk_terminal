@@ -10,6 +10,3 @@ pin_all_from 'app/javascript/controllers', under: 'controllers'
 
 pin 'bootstrap', to: 'bootstrap.min.js', preload: true
 pin '@popperjs/core', to: 'popper.js', preload: true
-
-pin 'custom/vertical_screen', preload: true
-pin 'custom/booking_input', preload: true
