@@ -24,6 +24,9 @@ default: &default
 development:
   <<: *default
   database: townsfolk_terminal_development
+  username: <%= ENV["TOWNSFOLK_TERMINAL_DATABASE_USERNAME"] %>
+  password: <%= ENV["TOWNSFOLK_TERMINAL_DATABASE_PASSWORD"] %>
+
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
@@ -82,5 +85,5 @@ test:
 production:
   <<: *default
   database: townsfolk_terminal_production
-  username: townsfolk_terminal
+  username: <%= ENV["TOWNSFOLK_TERMINAL_DATABASE_USERNAME"] %>
   password: <%= ENV["TOWNSFOLK_TERMINAL_DATABASE_PASSWORD"] %>
