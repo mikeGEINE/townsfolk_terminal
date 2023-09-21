@@ -29,7 +29,7 @@ RUN yarn global add sass
 # Precompile assets with esbuild and Sass
 RUN SECRET_KEY_BASE="assets_compile" RAILS_ENV=production bundle exec rake assets:precompile
 
-# ENTRYPOINT [ "./docker-entrypoint.sh" ]
+ENTRYPOINT [ "./docker-entrypoint.sh" ]
 EXPOSE 3000
 
 # Start the Rails server
