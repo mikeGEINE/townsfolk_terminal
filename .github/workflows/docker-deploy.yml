@@ -54,4 +54,5 @@ jobs:
             echo $CR_PAT > docker login ghcr.io -u ${{ github.actor }} --password-stdin
             docker-compose pull web
             docker-compose up -d --no-deps
+            docker system prune -a -f
 

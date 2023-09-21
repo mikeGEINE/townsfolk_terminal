@@ -27,3 +27,4 @@ en:
   out_of_date: Your booking is out of date! If you consider this a mistake, contact us.
   ok: OK
   visit_site: To book a room and pay for it visit our website
+  bnovo_authentication_failed: Failed to establish connection with the service. Contact our administrator.
