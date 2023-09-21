@@ -2,12 +2,12 @@
 
 Rails.application.routes.draw do
   namespace :admin do
-    root to: 'admin#view_rooms'
+    root to: '/admin#view_rooms'
     get 'view_accounts'
     get 'view_rooms'
     post 'update_account'
     post 'update_room'
-    get 'sync_rooms', to: 'admin#sync_rooms'
+    get 'sync_rooms', to: '/admin#sync_rooms'
   end
 
   scope '(:locale)', locale: /en|ru/ do

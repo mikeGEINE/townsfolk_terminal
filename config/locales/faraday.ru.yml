@@ -1,0 +1,17 @@
+ru:
+  faraday:
+    error: "Произошла непредвиденная ошибка подключения. Обратитесь к администратору."
+    connection_failed: "Подключение не удалось. Обратитесь к администратору."
+    timeout_error: "Connection timeout. Обратитесь к администратору."
+    ssl_error: "SSL Error. Обратитесь к администратору."
+    server_error: "Ошибка сервера. Обратитесь к администратору."
+    nil_status_error: "Nil Status Error. Обратитесь к администратору."
+    bad_request_error: "Ошибка 400 Bad Request. Обратитесь к администратору."
+    unauthorized_error: "Ошибка 401 Unauthorized. Обратитесь к администратору."
+    forbidden_error: "Ошибка 403 Forbidden. Обратитесь к администратору."
+    resource_not_found: "Ошибка 404 Not Found. Обратитесь к администратору."
+    proxy_auth_error: "Ошибка 407 Proxy Auth Failed. Обратитесь к администратору."
+    request_timeout_error: "Ошибка 408 Request Timeout. Обратитесь к администратору."
+    conflict_error: "Ошибка 409 Conflict. Обратитесь к администратору."
+    unprocessable_entity_error: "Ошибка 422 Unprocessable Entity. Обратитесь к администратору."
+    client_error: "Client Error. Обратитесь к администратору."

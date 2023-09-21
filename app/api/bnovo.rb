@@ -94,6 +94,6 @@ class Bnovo
   def try_request(method, path, body = nil, headers = nil)
     Try[Faraday::Error] {client.send method, path, body, headers}.fmap { |resp| resp.body }
       .to_result
-      .or { |e| Failure(e.class.name.underscore.to_sym) }
+      .or { |e| Failure(e.class.name.underscore.sub('/','.')) }
   end
 end

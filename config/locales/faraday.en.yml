@@ -1,0 +1,17 @@
+ru:
+  faraday:
+    error: "An unexpected connection error has occurred. Contact with administrator."
+    connection_failed: "Connection failed. Contact with administrator."
+    timeout_error: "Connection timeout. Contact with administrator."
+    ssl_error: "SSL Error. Contact with administrator."
+    server_error: "Server error. Contact with administrator."
+    nil_status_error: "Nil Status Error. Contact with administrator."
+    bad_request_error: "Error 400 Bad Request. Contact with administrator."
+    unauthorized_error: "Error 401 Unauthorised. Contact with administrator."
+    forbidden_error: "Error 403 Forbidden. Please Contact with administrator."
+    resource_not_found: "Error 404 Not Found. Please Contact with administrator."
+    proxy_auth_error: "Error 407 Proxy Auth Failed. Contact with administrator."
+    request_timeout_error: "Error 408 Request Timeout. Contact with administrator."
+    conflict_error: "Error 409 Conflict. Contact with administrator."
+    unprocessable_entity_error: "Error 422 Unprocessable Entity. Contact with administrator."
+    client_error: "Client Error. Contact with administrator."
